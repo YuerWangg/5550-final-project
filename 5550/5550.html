@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+
+
+
+<title>ASSESSING THE ROLE OF POWER GRID INFRASTRUCTURE IN WILDFIRE IGNITION</title>
+
+
+
+
+
+
+<style>
+@page {
+size: 45in 38in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 45px;
+width: 45in;
+height: 38in;
+padding: 0;
+text-align: justify;
+font-family: Palatino;
+}
+.poster_wrap {
+width: 45in;
+height: 38in;
+padding: 0cm;
+}
+.title_container {
+width: 45in;
+height: calc(38in * 0.15);
+overflow: hidden;
+background-color: #0b4545;
+border: 0 solid #0b4545;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Palatino;
+}
+/* unvisited link */
+a:link {
+color: #cc0000;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #cc0000;
+}
+
+/* mouse over link */
+a:hover {
+color: #cc0000;
+}
+
+/* selected link */
+a:active {
+color: #cc0000;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #0b4545;
+-moz-column-rule-color: #0b4545;
+column-rule-color: #0b4545;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 75pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(45in + 0 + 0);
+height: calc(38in * 0.83);
+padding-top: calc(38in * 0.005);
+padding-bottom: calc(38in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #ffffff;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 2mm solid #0b4545;
+background-color: #0b4545;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #00808024;
+color: #0b4545;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">ASSESSING THE ROLE OF POWER GRID INFRASTRUCTURE IN WILDFIRE IGNITION</h1>
+<h3 id="author">Yuer Wang<sup></sup></h3><br>
+<h5 id="affiliation"><sup></sup> Data Science and Analytics, Georgetown University</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Climate change is mostly to blame for the increased frequency, intensity, and destructiveness of wildfires, especially in states like California. This has had a devastating impact on the environment, ecosystems, climate and human health[1].</p>
+<p>This project aims to analyze the relationship between power grid characteristics and fire ignition risks in California, focusing on the factors such as voltage, proximity to vegetation, and infrastructure condition. The results of this research are essential to developing wildfire risk models, developing mitigation plans, and assisting in the formulation of laws pertaining to grid management and fire safety.</p>
+<p><img src="plots/fire_trans.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<p>For the transmission data, due to its characteristic of the line, making it challenging to match the fire data with the powerline. When merging the datasets, instead of matching the power line by the particular line, we calculate the number of lines near the fire ignition.</p>
+<p><img src="plots/trans_fire.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>Power infrastructure evolves over time with new lines being built, old ones decommissioned, upgrades to existing lines, and changes in maintenance practices. These shifts can introduce biases when analyzing historical fire data. Fires may be incorrectly linked to power lines that didn’t exist or miss associations with lines no longer in use.
+These challenges make implementing time-series analysis infeasible for this project, as the temporal inconsistencies would undermine the validity of the results.</p>
+<div id="models" class="section level2">
+<h2>Models</h2>
+<p>Two Model was implemented for this project: Random Forest and XGBoost.
+Random Forest: interpretable and robust, providing a baseline understanding of the problem.
+XGBoost: the ability to handle heterogeneous datasets, capture nonlinear relationships, and provide insights into feature importance.</p>
+<p>SMOTE were implemented due to the imbalanced data.</p>
+</div>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<p>We evaluated the performance of Random Forest and XGBoost models for predicting wildfire occurrence using the dataset enriched with transmission line features. Both models were assessed based on accuracy, precision, recall, F1-score, ROC-AUC, and feature importance.</p>
+<div id="random-forest-results" class="section level2">
+<h2>Random Forest Results</h2>
+<p>Performance Metrics: The model excelled at classifying non-fire events, with a precision of 98% and a recall of 88%, meaning it was highly reliable in identifying areas without fires. For fire events, the model demonstrated reasonable accuracy, achieving a precision of 66% and an impressive recall of 93%, ensuring that most fire events were detected.</p>
+<p>Classification Report:
+precision recall f1-score support</p>
+<pre><code>       0       0.98      0.88      0.93      3819
+       1       0.66      0.93      0.77       978
+
+accuracy                           0.89      4797
+ROC-AUC Score: 0.9595545574249086</code></pre>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<p><img src="plots/rf_confu.png" alt="XG Confusion Matrix" style="width: 49%; margin-right: 1%;">
+<img src="plots/rf_imp_f.png" alt="XG Important Features" style="width: 49%;"></p>
+</div>
+</div>
+<div id="xgboost-results" class="section level2">
+<h2>XGBoost Results</h2>
+<p>Performance Metrics: the model excelled in detecting fire events, achieving a high recall of 96%, meaning it successfully identified the vast majority of fire occurrences. However, its precision for fire events was slightly lower at 63%, indicating more false positives compared to Random Forest.</p>
+<p>Classification Report:
+precision recall f1-score support</p>
+<pre><code>       0       0.99      0.85      0.92      3819
+       1       0.63      0.96      0.76       978
+
+accuracy                           0.88      4797
+ROC-AUC Score: 0.9619128017216683</code></pre>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<p><img src="plots/xg_confu.png" alt="XG Confusion Matrix" style="width: 49%; margin-right: 1%;">
+<img src="plots/xg_imp_f.png" alt="XG Important Features" style="width: 49%;"></p>
+</div>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p>Both the Random Forest and XGBoost models demonstrated strong performance in predicting fire occurrences, with high overall accuracy and excellent discriminative ability reflected in ROC-AUC scores of 0.96. The Random Forest model excelled in precision for non-fire events, achieving 98%, while maintaining reasonable recall for fire events at 93%. On the other hand, XGBoost showed superior recall for fire events at 96%, making it highly effective at identifying areas prone to fire, though with slightly lower precision compared to Random Forest.
+These results highlight the strengths of each model: Random Forest provides a balanced approach with high precision for non-fire events, while XGBoost offers robust recall for fire detection. Together, they underscore the utility of machine learning in understanding fire risk, with each model catering to different priorities depending on whether minimizing false positives or maximizing fire detection is the primary objective.</p>
+</div>
+<div id="limitationnext-steps" class="section level1">
+<h1>Limitation/Next Steps</h1>
+<p>Preform Time Series for transmission line data. Due to the limitation of the dataset, the powerline transmission data is a more static dataset, which it does contains the creator year. However, we do not have the full view of the transmission dataset for every year, which causing limitations for the model to preform time series prediction.</p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<p>[1] World Meteorological Organization (WMO). ”Drought and heat exacerbate wildfires,” 01/24/2023.
+[2] Yaling Liu, Son Le, Yufei Zou, Mojtaba Sadeghi, Yang Chen, Pierre Gentine, Niels Andela. “A Simplified Machine Learning Based Wildfire Ignition Model from Insurance Perspective,” Presented at ICLR 2023.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
